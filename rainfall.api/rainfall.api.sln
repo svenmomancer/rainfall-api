@@ -3,13 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rainfall.api", "rainfall.api\rainfall.api.csproj", "{BD270DB8-CE7C-45D6-8AA3-7D535B254652}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "rainfall.api", "rainfall.api\rainfall.api.csproj", "{BD270DB8-CE7C-45D6-8AA3-7D535B254652}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rainfall.data", "rainfall.data\rainfall.data.csproj", "{1EBA2E6E-2B81-4C4F-87F5-761AA815F93D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "rainfall.data", "rainfall.data\rainfall.data.csproj", "{1EBA2E6E-2B81-4C4F-87F5-761AA815F93D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rainfall.domain", "rainfall.domain\rainfall.domain.csproj", "{2F000B2D-F88B-4B6D-8FBA-A5DA3F2507C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "rainfall.domain", "rainfall.domain\rainfall.domain.csproj", "{2F000B2D-F88B-4B6D-8FBA-A5DA3F2507C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rainfall.service", "rainfall.service\rainfall.service.csproj", "{ADFE5F59-416D-47AD-8035-71F890D1B7C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "rainfall.service", "rainfall.service\rainfall.service.csproj", "{ADFE5F59-416D-47AD-8035-71F890D1B7C0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{751397BF-CA0E-4DBF-A433-CAA0A86CB0C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rainfall.service.test", "rainfall.service.test\rainfall.service.test.csproj", "{8FDF33A3-2F2F-4140-8BE4-25422CA983A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rainfall.data.test", "rainfall.data.test\rainfall.data.test.csproj", "{A0AF2EE7-601D-4F65-8ED0-2720E80FDA59}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,9 +39,21 @@ Global
 		{ADFE5F59-416D-47AD-8035-71F890D1B7C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ADFE5F59-416D-47AD-8035-71F890D1B7C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ADFE5F59-416D-47AD-8035-71F890D1B7C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FDF33A3-2F2F-4140-8BE4-25422CA983A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FDF33A3-2F2F-4140-8BE4-25422CA983A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FDF33A3-2F2F-4140-8BE4-25422CA983A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FDF33A3-2F2F-4140-8BE4-25422CA983A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0AF2EE7-601D-4F65-8ED0-2720E80FDA59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0AF2EE7-601D-4F65-8ED0-2720E80FDA59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0AF2EE7-601D-4F65-8ED0-2720E80FDA59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0AF2EE7-601D-4F65-8ED0-2720E80FDA59}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8FDF33A3-2F2F-4140-8BE4-25422CA983A6} = {751397BF-CA0E-4DBF-A433-CAA0A86CB0C1}
+		{A0AF2EE7-601D-4F65-8ED0-2720E80FDA59} = {751397BF-CA0E-4DBF-A433-CAA0A86CB0C1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1A433947-77E9-48A8-81F0-C6F1FFB8E1E5}
