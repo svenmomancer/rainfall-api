@@ -1,0 +1,16 @@
+version : '3'
+services:
+  metadata:
+     image : rainfall-api:latest
+     container_name: rainfall-api
+     ports:
+       - 3000:3000
+     environment:
+       - ASPNETCORE_URLS=http://+:3000
+     networks:
+       - rainfall-network
+
+networks:
+    rainfall-network:
+      driver: bridge
+      name : rainfall-network
