@@ -15,26 +15,6 @@ namespace rainfall.service.ServiceQuery
             _rainfall = rainfall;
         }
 
-        public async Task<AutoWrap> GetListFlood(RainfallLimitDTO request)
-        {
-            try
-            {
-                // maps dto to model
-                var map = new MapperConfiguration(x => x.CreateMap<RainfallLimitDTO, RainfallLimitModel>())
-                                                        .CreateMapper().Map<RainfallLimitModel>(request);
-
-                // calls GetFloodsAsync repository method
-                var result = await _rainfall.GetFloodsAsync(map);
-
-                // I use the AutoWrapper Exception for the 400, 404 or 500 response code
-                if (result is null) throw new ApiException("No readings found", 404);
-
-                return new AutoWrap(result, 200);
-            }
-            catch (ApiException ex) { throw ex; }
-            catch (Exception ex) { throw new ApiException("Internal server error", 500); }
-        }
-
         public async Task<AutoWrap> GetFloodById(RainfallByIdDTO request)
         {
             try

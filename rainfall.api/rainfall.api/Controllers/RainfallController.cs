@@ -2,7 +2,6 @@
 using rainfall.domain.Wrapper;
 using rainfall.domain.Dto;
 using MediatR;
-using Swashbuckle.AspNetCore.Annotations;
 
 namespace rainfall.api.Controllers
 {
@@ -18,20 +17,8 @@ namespace rainfall.api.Controllers
         /// <summary>
         /// The number of readings to return
         /// </summary>
-        /// <param name="request"></param>
         /// <returns></returns>
-        [HttpGet, Route("flood-monitoring/id/floods"),]
-        public async Task<AutoWrap> GetFilteredFloods([FromQuery] RainfallLimitDTO request)
-        {
-            return await _mediator.Send(request);
-        }
-
-        /// <summary>
-        /// The number of readings to return
-        /// </summary>
-        /// <param name="request"></param>
-        /// <returns></returns>
-        [HttpGet, Route("flood-monitoring/id/floods/{floodId}"),]
+        [HttpGet, Route("rainfall/{floodId}"),]
         public async Task<AutoWrap> GetFilteredFloods1(string floodId)
         {
             return await _mediator.Send(new RainfallByIdDTO { FloodId = floodId});

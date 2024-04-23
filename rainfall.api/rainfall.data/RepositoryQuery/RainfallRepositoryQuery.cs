@@ -14,33 +14,6 @@ namespace rainfall.data.RepositoryQuery
             _url = url;
         }
 
-        public async Task<ListFloodViewModel> GetFloodsAsync(RainfallLimitModel request)
-        {
-            try
-            {
-                // i used using to auto dispose the connection
-                using (var client = new HttpClient())
-                {
-                    // used if condition for the endpoint with or without parameter
-                    var endpoint = request._limit is null ? _url.Value.ListFloodUrl : string.Format(_url.Value.ListFloodLimitUrl, request._limit);
-
-                    // calls the method
-                    var response = await client.GetAsync(endpoint);
-                    
-                    // converts the response to string
-                    var content = await response.Content.ReadAsStringAsync();
-
-                    // map the string response to my model
-                    var result = JsonConvert.DeserializeObject<ListFloodViewModel>(content);
-                    return result;
-                }
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-        }
-
         public async Task<FloodDataViewModel> GetFloodByIdAsync(RainfallByIdModel request)
         {
             try
